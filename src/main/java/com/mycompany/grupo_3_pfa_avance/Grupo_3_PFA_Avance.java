@@ -7,7 +7,7 @@ package com.mycompany.grupo_3_pfa_avance;
 import javax.swing.JOptionPane;
 
 /**
- * ARON
+ * ARON 222222
  * @author javie
  */
 public class Grupo_3_PFA_Avance {
