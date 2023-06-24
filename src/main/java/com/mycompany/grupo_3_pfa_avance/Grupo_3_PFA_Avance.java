@@ -27,7 +27,9 @@ public class Grupo_3_PFA_Avance {
             ));
             switch(opcion) {
                 case 1:
-                    System.out.println("-------");
+                    System.out.println("Modulo de registro");
+                    Usuarios users = new Usuarios("ddsfesf","dwqwdw","wdqwd","","","",0,0);
+                    
                     break;
                 case 2:
                     System.out.println("-------");
