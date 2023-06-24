@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  * ARON 222222
+ * Diego 
  * @author javie
  */
 public class Grupo_3_PFA_Avance {
