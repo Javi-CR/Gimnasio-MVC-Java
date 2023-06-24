@@ -7,7 +7,7 @@ package com.mycompany.grupo_3_pfa_avance;
 import javax.swing.JOptionPane;
 
 /**
- *
+ * ARON
  * @author javie
  */
 public class Grupo_3_PFA_Avance {
@@ -30,7 +30,6 @@ public class Grupo_3_PFA_Avance {
                     System.out.println("Modulo de registro");
                     Usuarios users = new Usuarios("sfdwefef","aaaa","dddd","ffff","fff","fff",457525,45345);
                     users.Registrado();
-                    users.Registrado();
                     break;
                 case 2:
                     System.out.println("-------");
@@ -39,7 +38,7 @@ public class Grupo_3_PFA_Avance {
                     System.out.println("-------");
                     break;
                 case 4:
-                    System.out.println("-------");
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Opción Invalida...");
