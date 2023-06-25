@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  * ARON 222222
- * Diego 
+ * Diego dsd
  * @author javie
  */
 public class Grupo_3_PFA_Avance {
@@ -29,7 +29,7 @@ public class Grupo_3_PFA_Avance {
             switch(opcion) {
                 case 1:
                     System.out.println("Modulo de registro");
-                    Usuarios users = new Usuarios("sfdwefef","aaaa","dddd","ffff","fff","fff",457525,45345);
+                    Usuarios users = new Usuarios("Diego Caceres","aaaa","dddd","ffff","fff","fff",457525,45345);
                     users.Registrado();
                     break;
                 case 2:
