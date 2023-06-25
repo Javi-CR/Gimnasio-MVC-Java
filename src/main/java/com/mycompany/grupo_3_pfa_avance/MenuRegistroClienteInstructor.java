@@ -1,47 +1,40 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 package com.mycompany.grupo_3_pfa_avance;
 
 import javax.swing.JOptionPane;
 
 /**
- * ARON 222222
- * Diego dsd
- * @author javie
- * Justin
+ *
+ * @author diego
  */
-public class Grupo_3_PFA_Avance {
-    
- public static void main(String[] args) {
-        MenuRegistroClienteInstructor mnuRegis = new MenuRegistroClienteInstructor();
-        int opcion = 0;
+public class MenuRegistroClienteInstructor {
+    Cliente cli = new Cliente("", "", "", "", 0, 0, "", "");
+    public void Menu(){
+     int opcion = 0;
 
         //...............
-        while (opcion != 4) {
+        while (opcion != 3) {
             opcion = Integer.parseInt(JOptionPane.showInputDialog(null,
                     "Menú Inicial:\n"
-                    + "1 - Registrarse\n"
-                    + "2 - Iniciar Seccion\n"
-                    + "3 - Horarios\n"
-                    + "4 - Salir\n"
+                    + "1 - Registrar cliente\n"
+                    + "2 - Registrar Instructor\n"
+                    + "3 - Salir\n"
                     + "Digite una opción para continuar: "
             ));
             switch (opcion) {
                 case 1:
-                    System.out.println("Modulo de registro");
-                    mnuRegis.Menu();
+                    System.out.println("Registro de Clientes");
+                    cli.Registrar();
             
                     break;
                 case 2:
-                    System.out.println("-------");
+                    System.out.println("Registro instructor");
                     break;
                 case 3:
-                    System.out.println("-------");
-                    break;
-                case 4:
-                    System.out.println("Saliendo del sistema, gracias por su visita :)");
+                    System.out.println("Saliendo del registro");
                     System.exit(0);
                     break;
                 default:
