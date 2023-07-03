@@ -7,7 +7,7 @@ package gimnasio;
 import javax.swing.JOptionPane;
 
 /**
- *
+ * ...
  * @author diego
  */
 public class Cliente extends Usuarios {
