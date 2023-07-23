@@ -15,6 +15,9 @@ ValidarRegistroInstruc VRI = new ValidarRegistroInstruc();
      */
     public MenuRegistro() {
         initComponents();
+        setTitle("Selecciona una Opción");
+        setResizable(false);
+        setLocationRelativeTo(null);
     }
 
     /**

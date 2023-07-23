@@ -17,6 +17,7 @@ public class Cliente extends usuarios {
         super(Nombre, Edad, Direccion, telefono, Cedula, ID, Correo, Contraseña);
     }
     
+    
     @Override
     public void Registrar() {
         setNombre(JOptionPane.showInputDialog(

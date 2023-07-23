@@ -20,6 +20,9 @@ public class ValidarRegistroInstruc extends javax.swing.JFrame {
      */
     public ValidarRegistroInstruc() {
         initComponents();
+        setTitle("Root...");
+        setResizable(false);
+        setLocationRelativeTo(null);
     }
 
     /**

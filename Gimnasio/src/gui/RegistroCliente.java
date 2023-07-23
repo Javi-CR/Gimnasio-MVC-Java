@@ -4,6 +4,7 @@
  */
 package gui;
 import gimnasio.Cliente;
+import gimnasio.Verificador;
 import gui.RegistroCliente;
 import javax.swing.JOptionPane;
 
@@ -18,6 +19,9 @@ public class RegistroCliente extends javax.swing.JFrame {
      */
     public RegistroCliente() {
         initComponents();
+        setTitle("Registro (Cliente)");
+        setResizable(false);
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -251,45 +255,47 @@ public class RegistroCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_NumTActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-    String Nombre = NombreComple1.getText();
-    String Ced = Cedula.getText();
-    String CorrEl = CorrE.getText();
-    String Tel = NumT.getText();
-    String Pass = Password.getText();
-    String edad = ed.getText();
-    String Direc = Direccio.getText();
-    
-    if (Nombre.isEmpty() || Ced.isEmpty() || CorrEl.isEmpty() || Tel.isEmpty() || Pass.isEmpty()|| edad.isEmpty()|| Direc.isEmpty()) {
-        JOptionPane.showMessageDialog(null, "Error al ingresar al sistema, debe llenar todas las casillas.");
-    } else {
-        try{
-        int cedula = Integer.parseInt(Ced);
-        Cliente cliente = new Cliente(Nombre, edad, Direc, Tel, Integer.parseInt(Ced), 0, CorrEl, Pass);
-        cliente.ValidacionRegistro(Nombre, Ced, CorrEl, Tel, Pass, edad, Direc);
-         
-        if(CorrEl.contains("@")&& CorrEl.contains(".com")){
-            JOptionPane.showMessageDialog(null, "Registro exitoso!");
-        dispose(); // Cerrar la ventana actual (registro)
+        //
+        Verificador enviar = new Verificador();
+        //
+        String Nombre = NombreComple1.getText();
+        String Ced = Cedula.getText();
+        String CorrEl = CorrE.getText();
+        String Tel = NumT.getText();
+        String Pass = Password.getText();
+        String edad = ed.getText();
+        String Direc = Direccio.getText();
 
-        PantallaPrincipal MPTN = new PantallaPrincipal();
-        MPTN.setVisible(true);
-        
-        }else{
-        JOptionPane.showMessageDialog(null, "El correo electronico debe de contener @ y .com");
+        if (Nombre.isEmpty() || Ced.isEmpty() || CorrEl.isEmpty() || Tel.isEmpty() || Pass.isEmpty() || edad.isEmpty() || Direc.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Error al ingresar al sistema, debe llenar todas las casillas.");
+        } else {
+            try {
+                int cedula = Integer.parseInt(Ced);
+                Cliente cliente = new Cliente(Nombre, edad, Direc, Tel, Integer.parseInt(Ced), 0, CorrEl, Pass);
+                cliente.ValidacionRegistro(Nombre, Ced, CorrEl, Tel, Pass, edad, Direc);
+                
+                String Envio1 = CorrEl;
+                String Envio2 = Pass;
+                enviar.setRecibirUsuario(Envio1);
+                enviar.setUsuarioPass(Envio2);
+                
+                if (CorrEl.contains("@") && CorrEl.contains(".com")) {
+                    JOptionPane.showMessageDialog(null, "Registro exitoso!");
+                    dispose(); // Cerrar la ventana actual (registro)
+
+                    PantallaPrincipal MPTN = new PantallaPrincipal();
+                    MPTN.setVisible(true);
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "El correo electronico debe de contener @ y .com");
+                }
+
+            } catch (NumberFormatException e) {
+
+                JOptionPane.showMessageDialog(null, "La cédula debe de ser un numero entero");
+
+            }
         }
-       
-       
-       } catch(NumberFormatException e){
-           
-           JOptionPane.showMessageDialog(null, "La cédula debe de ser un numero entero");
-       
-       }
-        
-  
-     
-    }
-       
-      
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordActionPerformed
