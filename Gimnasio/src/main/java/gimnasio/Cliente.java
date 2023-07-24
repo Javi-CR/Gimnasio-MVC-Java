@@ -8,7 +8,8 @@ import javax.swing.JOptionPane;
 import java.util.Random;
 /**
  *
- * @author pablo
+ * @author pablo 
+ * Diego
  */
 public class Cliente extends usuarios {
     Random random = new Random();
