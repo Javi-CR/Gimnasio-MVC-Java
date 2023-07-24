@@ -12,7 +12,7 @@ import java.util.Random;
  */
 public class Cliente extends usuarios {
     Random random = new Random();
-    
+    //Prueba de commmit
     public Cliente(String Nombre, String Edad, String Direccion, String telefono, int Cedula, int ID, String Correo, String Contraseña) {
         super(Nombre, Edad, Direccion, telefono, Cedula, ID, Correo, Contraseña);
     }
