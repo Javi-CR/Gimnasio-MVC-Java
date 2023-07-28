@@ -4,8 +4,6 @@
  */
 package gui;
 import gimnasio.Cliente;
-import gimnasio.Verificador;
-import gui.RegistroCliente;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -256,9 +254,7 @@ Connection cn = con.conectar();
     }//GEN-LAST:event_NumTActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        //
-        Verificador enviar = new Verificador();
-        //
+
         String CorrEl = "";
         String Pass = "";
         String Nombre = NombreComple1.getText();
@@ -273,9 +269,6 @@ Connection cn = con.conectar();
             JOptionPane.showMessageDialog(null, "Error al ingresar al sistema, debe llenar todas las casillas.");
         } else {
             try {
-                //
-                enviar.ValidarUsuario(CorrEl, Pass);
-                //
                 int cedula = Integer.parseInt(Ced);
                 Cliente cliente = new Cliente(Nombre, edad, Direc, Tel, Integer.parseInt(Ced), 0, CorrEl, Pass);
                 cliente.ValidacionRegistro(Nombre, Ced, CorrEl, Tel, Pass, edad, Direc);

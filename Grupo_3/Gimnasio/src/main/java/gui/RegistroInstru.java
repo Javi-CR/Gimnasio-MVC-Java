@@ -4,8 +4,6 @@
  */
 package gui;
 import gimnasio.Intructor;
-import gimnasio.Verificador;
-import gui.RegistroInstru;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -299,14 +297,6 @@ public class RegistroInstru extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error al ingresar al sistema, debe llenar todas las casillas.");
         } else {
             try {
-                // Crear el objeto Verificador
-                Verificador enviar = new Verificador();
-                // Configurar las variables del objeto verificador
-                enviar.setInstructor(CorrEl); // Usa el correo del instructor como identificación
-                enviar.setInstructorPass(Pass); // Usa la contraseña del instructor
-
-                // Llamar al método Validar del objeto verificador
-                enviar.Validar();
                 
                 int cedula = Integer.parseInt(Ced);
                 Intructor inst = new Intructor(Nombre, edad, Direc, Tel, cedula, WIDTH, CorrEl, CorrEl);
