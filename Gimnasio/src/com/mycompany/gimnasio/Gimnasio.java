@@ -17,6 +17,8 @@ public class Gimnasio {
      */
     public static void main(String[] args) {
        
+        
+        
         new PantallaPrincipal().setVisible(true);
     }
 }

@@ -122,7 +122,7 @@ Connection cn = con.conectar();
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
         jLabel6.setText("Contraseña");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 90, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel1.setText("Nombre Completo");
