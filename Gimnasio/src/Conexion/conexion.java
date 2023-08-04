@@ -19,9 +19,9 @@ public class conexion {
 
     Connection conexion = null;
 
-    String url = "jdbc:mysql://localhost:3307/gimnasio";
+    String url = "jdbc:mysql://localhost:3306/gimnasio";
     String username = "root";
-    String password = "74123";
+    String password = "84684089";
     String driver = "com.mysql.cj.jdbc.Driver";
 
     public Connection conectar() {
