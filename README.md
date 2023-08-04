@@ -2,8 +2,7 @@
 SQL Codigo:
 --------------------------------------------------------
 create database gimnasio;
-
-
+--------------------------------------------------------
 use gimnasio;
     create table registroCliente (
     id int not null auto_increment,
@@ -16,7 +15,7 @@ use gimnasio;
     Cedula varchar(10) null,
     primary key (id)
 );
-
+--------------------------------------------------------
 use gimnasio;
     create table registroInstructor (
     id int not null auto_increment,
@@ -31,7 +30,7 @@ use gimnasio;
     UsuarioIntru varchar(50) null,
     primary key (id)
 );
-
+--------------------------------------------------------
 use gimnasio;
     create table taller (
     idclase int not null auto_increment,
@@ -44,7 +43,7 @@ use gimnasio;
     descripcion varchar(280) null,
     primary key (id)
 );
-
+--------------------------------------------------------
 select * from registroCliente;
 select * from registroInstructor;
 select * from taller;
