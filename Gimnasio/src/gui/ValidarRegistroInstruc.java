@@ -4,7 +4,7 @@
  */
 package gui;
 
-import Gimnasio.Intructor;
+import Control.Intructor;
 import javax.swing.JOptionPane;
 
 

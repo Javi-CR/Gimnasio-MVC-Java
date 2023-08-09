@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package gui;
-import Gimnasio.Intructor;
+import Control.Intructor;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -223,38 +223,11 @@ public class RegistroInstru extends javax.swing.JFrame {
         if (Nombre.isEmpty() || Ced.isEmpty() || CorrEl.isEmpty() || Tel.isEmpty() || Pass.isEmpty() || edad.isEmpty() || Direc.isEmpty() || User.isEmpty() || especialidadI.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Error al ingresar al sistema, debe llenar todas las casillas.");
         } else {
-            try {
-                
-                int cedula = Integer.parseInt(Ced);
-                Intructor inst = new Intructor(Nombre, edad, Direc, Tel, cedula, WIDTH, CorrEl, CorrEl);
-                inst.ValidacionRegistroInstruc(Nombre, Ced, CorrEl, Tel, Pass, edad, Direc, User, especialidadI);
-
-                if (CorrEl.contains("@") && CorrEl.contains(".com")) {
-                    try{
-                    String consulta= " insert into registroInstructor (id, Nombre, Edad, Direccion, telefono, Correo, Contraseña, Cedula, especialidad, UsuarioIntru) values('"+inst.getID() +"','"+Nombre +"', '"+edad +"','"+Direc +"','"+Tel +"','"+CorrEl +"','"+Pass +"','"+Ced+"','"+especialidadI +"', '"+User +"' )";
-                    PreparedStatement ps = cn.prepareStatement(consulta);
-                    ps.executeUpdate();
-                    JOptionPane.showMessageDialog(null, "Registro exitoso!");
-                    con.desconectar();
-                    }catch(SQLException e){
-                        JOptionPane.showMessageDialog(null, "No se pudo registrar usuario");
-                        e.printStackTrace();
-                    
-                    };
-                    dispose(); // Cerrar la ventana actual (registro)
-
-                    PantallaPrincipal MPTN = new PantallaPrincipal();
-                    MPTN.setVisible(true);
-
-                } else {
-                    JOptionPane.showMessageDialog(null, "El correo electronico debe de contener @ y .com");
-                }
-
-            } catch (NumberFormatException e) {
-
-                JOptionPane.showMessageDialog(null, "La cédula debe de ser un numero entero");
-
-            }
+        Intructor inst = new Intructor(Nombre, edad, Direc, Tel, Integer.parseInt(Ced), 0, CorrEl, CorrEl);
+        inst.AñadiraBasedeDatos(cn, Nombre, edad, Direc, Tel, Ced, CorrEl, especialidadI, Pass, User);
+         dispose(); // Cerrar la ventana actual (registro)
+                PantallaPrincipal MPTN = new PantallaPrincipal();
+                MPTN.setVisible(true);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 

@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package gui;
-import Gimnasio.Cliente;
+import Control.Cliente;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -204,39 +204,18 @@ Connection cn = con.conectar();
 
         if (Nombre.isEmpty() || Ced.isEmpty() || CorrEl.isEmpty() || Tel.isEmpty() || Pass.isEmpty() || edad.isEmpty() || Direc.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Error al ingresar al sistema, debe llenar todas las casillas.");
+            
         } else {
-            try {
-                int cedula = Integer.parseInt(Ced);
-                Cliente cliente = new Cliente(Nombre, edad, Direc, Tel, Integer.parseInt(Ced), 0, CorrEl, Pass);
-                cliente.ValidacionRegistro(Nombre, Ced, CorrEl, Tel, Pass, edad, Direc);
-         
-                if (CorrEl.contains("@") && CorrEl.contains(".com")) {
-                    try{
-                    String consulta= " insert into registroCliente (id, Nombre, Edad, Direccion, telefono, Correo, Contraseña, Cedula) values('"+cliente.getID()+"', '"+Nombre+"', '"+edad+"', '"+Direc+"', '"+Tel+"', '"+CorrEl+"',  '"+Pass+"',  '"+Ced+"' )";
-                    PreparedStatement ps = cn.prepareStatement(consulta);
-                    ps.executeUpdate();
-                    JOptionPane.showMessageDialog(null, "Registro exitoso!");
-                    con.desconectar();
-                    }catch(SQLException e){
-                        JOptionPane.showMessageDialog(null, "No se pudo registrar usuario");
-                        e.printStackTrace();
-                    
-                    }
-                    dispose(); // Cerrar la ventana actual (registro)
+            
+              Cliente cliente = new Cliente(Nombre, edad, Direc, Tel, Integer.parseInt(Ced), 0, CorrEl, Pass);
+              cliente.AñadiraBasedeDatos(cn, Nombre, Ced, CorrEl, Tel, Pass, edad, Direc);
+              dispose(); // Cerrar la ventana actual (registro)
 
-                    PantallaPrincipal MPTN = new PantallaPrincipal();
-                    MPTN.setVisible(true);
-
-                } else {
-                    JOptionPane.showMessageDialog(null, "El correo electronico debe de contener @ y .com");
-                }
-
-            } catch (NumberFormatException e) {
-
-                JOptionPane.showMessageDialog(null, "La cédula debe de ser un numero entero");
-
-            }
+                PantallaPrincipal MPTN = new PantallaPrincipal();
+                MPTN.setVisible(true);
         }
+        
+                  
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordActionPerformed
