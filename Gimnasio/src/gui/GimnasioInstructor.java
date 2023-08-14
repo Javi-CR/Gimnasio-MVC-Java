@@ -29,23 +29,35 @@ public class GimnasioInstructor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        BtonBorrarTaller = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        BtonActTABLA = new javax.swing.JButton();
+        BtonCrearTaller = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        DescripcionTaller = new java.awt.TextField();
+        jLabel9 = new javax.swing.JLabel();
+        NivelTaller = new java.awt.TextField();
+        ZonaTaller = new java.awt.TextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        DuracionTaller = new java.awt.TextField();
+        jLabel6 = new javax.swing.JLabel();
+        HoraTaller = new java.awt.TextField();
+        TallerNom = new java.awt.TextField();
+        jLabel5 = new javax.swing.JLabel();
+        InstructorNom = new java.awt.TextField();
+        jLabel4 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        TablaTaller = new javax.swing.JTable();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton2.setText("Salir");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 20, 100, 30));
+        jPanel2 = new javax.swing.JPanel();
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButton1.setText("Crear Taller");
@@ -55,29 +67,178 @@ public class GimnasioInstructor extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 500, 260, 70));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Deco1.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 600));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel13.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        jLabel13.setText("REGISTRO DE TALLERES");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
+
+        BtonBorrarTaller.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BtonBorrarTaller.setText("Borrar Taller");
+        BtonBorrarTaller.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtonBorrarTallerActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BtonBorrarTaller, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 490, 180, 40));
+
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton2.setText("Salir");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 30, 100, 30));
+
+        BtonActTABLA.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BtonActTABLA.setText("Actulizar Tabla");
+        BtonActTABLA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtonActTABLAActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BtonActTABLA, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 490, 180, 40));
+
+        BtonCrearTaller.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BtonCrearTaller.setText("Crear Taller");
+        BtonCrearTaller.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtonCrearTallerActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BtonCrearTaller, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, 180, 40));
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel10.setText("Descripcion");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, -1, -1));
+
+        DescripcionTaller.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DescripcionTallerActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DescripcionTaller, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 170, -1));
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel9.setText("Nivel");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, -1, -1));
+
+        NivelTaller.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NivelTallerActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NivelTaller, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 170, -1));
+
+        ZonaTaller.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ZonaTallerActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ZonaTaller, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 170, -1));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setText("Zona");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setText("Duracion");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, -1, -1));
+
+        DuracionTaller.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DuracionTallerActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DuracionTaller, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 170, -1));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setText("Horario del Taller");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
+
+        HoraTaller.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HoraTallerActionPerformed(evt);
+            }
+        });
+        jPanel1.add(HoraTaller, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 170, -1));
+
+        TallerNom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TallerNomActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TallerNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 170, -1));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setText("Instructor");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, -1, -1));
+
+        InstructorNom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InstructorNomActionPerformed(evt);
+            }
+        });
+        jPanel1.add(InstructorNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 170, -1));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setText("Taller");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, -1, -1));
+
+        TablaTaller.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "INSTRUCTOR", "HORARIO TALLER", "DURACION", "ZONA", "NIVEL", "DESCRIPCION"
+            }
+        ));
+        jScrollPane1.setViewportView(TablaTaller);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 720, 390));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trasparencia.png"))); // NOI18N
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 220, 400));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trasparencia.png"))); // NOI18N
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 190, 360));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trasparencia.png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 230, 460));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trasparencia.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 720, 460));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/xcs.jpeg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 730, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 460, Short.MAX_VALUE)
         );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, 730, 460));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        dispose();
-        new RegisTaller().setVisible(true);
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -86,6 +247,46 @@ public class GimnasioInstructor extends javax.swing.JFrame {
         new PantallaPrincipal().setVisible(true);
         
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void TallerNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TallerNomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TallerNomActionPerformed
+
+    private void InstructorNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InstructorNomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_InstructorNomActionPerformed
+
+    private void HoraTallerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HoraTallerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HoraTallerActionPerformed
+
+    private void DuracionTallerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DuracionTallerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DuracionTallerActionPerformed
+
+    private void ZonaTallerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZonaTallerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ZonaTallerActionPerformed
+
+    private void NivelTallerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NivelTallerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NivelTallerActionPerformed
+
+    private void DescripcionTallerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcionTallerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DescripcionTallerActionPerformed
+
+    private void BtonBorrarTallerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtonBorrarTallerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtonBorrarTallerActionPerformed
+
+    private void BtonCrearTallerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtonCrearTallerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtonCrearTallerActionPerformed
+
+    private void BtonActTABLAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtonActTABLAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtonActTABLAActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,9 +327,34 @@ public class GimnasioInstructor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton BtonActTABLA;
+    public javax.swing.JButton BtonBorrarTaller;
+    public javax.swing.JButton BtonCrearTaller;
+    public java.awt.TextField DescripcionTaller;
+    public java.awt.TextField DuracionTaller;
+    public java.awt.TextField HoraTaller;
+    public java.awt.TextField InstructorNom;
+    public java.awt.TextField NivelTaller;
+    public javax.swing.JTable TablaTaller;
+    public java.awt.TextField TallerNom;
+    public java.awt.TextField ZonaTaller;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

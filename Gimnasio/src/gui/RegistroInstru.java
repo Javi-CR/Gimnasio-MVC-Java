@@ -79,7 +79,7 @@ public class RegistroInstru extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         jLabel2.setText("Numero de Cedula");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, -1, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 110, -1));
 
         CedulaI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,7 +90,7 @@ public class RegistroInstru extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         jLabel4.setText("Correo electronico");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 120, -1));
 
         CorrEI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,7 +112,7 @@ public class RegistroInstru extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         jLabel6.setText("Contraseña");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 80, -1));
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -141,7 +141,7 @@ public class RegistroInstru extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         jLabel1.setText("Nombre Completo");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 110, -1));
 
         edI.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         edI.setAlignmentX(55.0F);
@@ -167,7 +167,7 @@ public class RegistroInstru extends javax.swing.JFrame {
 
         Direc.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         Direc.setText("Dirección");
-        jPanel2.add(Direc, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
+        jPanel2.add(Direc, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 60, -1));
         jPanel2.add(UserI, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 270, -1));
         jPanel2.add(EspecialidadI, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 110, -1));
 
@@ -177,7 +177,7 @@ public class RegistroInstru extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Segoe UI Light", 1, 12)); // NOI18N
         jLabel9.setText("Nombre de usuario instructor");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 190, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 450, 330));
 

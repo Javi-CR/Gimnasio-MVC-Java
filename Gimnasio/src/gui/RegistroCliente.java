@@ -118,7 +118,7 @@ Connection cn = con.conectar();
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel5.setText("Número de telefónico");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 60, -1, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 60, 150, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
         jLabel6.setText("Contraseña");
