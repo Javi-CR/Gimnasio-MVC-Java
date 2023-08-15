@@ -59,7 +59,7 @@ public talleresControl(GimnasioInstructor vista) {
     }
     
         public void listarTabla() {
-        String[] titulos = {"ID", "Taller", "Instructor", "Horario", "Duracion", "Zona", "Nivel", "Descripcion"};
+        String[] titulos = {"ID", "Clase", "Instructor", "Horario", "Duracion", "Zona", "Nivel", "Descripcion"};
         modelotabla = new DefaultTableModel(titulos, 0);
         List<taller> listaTalleres = tallEx.ListarTalleres();
 
@@ -106,9 +106,27 @@ public talleresControl(GimnasioInstructor vista) {
                  System.out.println("Error al cargar datos" + e);
                  return false;
             }
-            
-
+          
         }
+            private void limpiar(){
+            vista.getTallerNom().setText("");
+            vista.getInstructorNom().setText("");
+            vista.getHoraTaller().setText("");
+            vista.getDuracionTaller().setText("");
+            vista.getZonaTaller().setText("");
+            vista.getNivelTaller().setText("");
+            vista.getDescripcionTaller().setText("");
+            id = 0;
+            nombreTaller = "";
+            nombreInstructor = "";
+            horarioTaller = "";
+            duracion = "";
+            zona = "";
+            nivel = "";
+            descripcion = "";
+            
+            }
+
         
          private void AgregarTaller(){
              try {
@@ -117,6 +135,7 @@ public talleresControl(GimnasioInstructor vista) {
                          taller tall = new taller(nombreTaller, nombreInstructor, horarioTaller, zona, nivel, descripcion, duracion);
                          tallEx.agregar(tall);
                          JOptionPane.showMessageDialog(null, "Registro exitoso");
+                         limpiar();
                      }
                      
                  }
@@ -129,36 +148,41 @@ public talleresControl(GimnasioInstructor vista) {
         }
          private void actualizarTaller(){
              try {
-                 if (CargarDatos()) {
-                     if (ValidarDatos()) {
+                 if (ValidarDatos()) {
+                     if (CargarDatos()) {
                          taller talle = new taller(id, nombreTaller, nombreInstructor, horarioTaller, zona, nivel, descripcion, duracion);
                          tallEx.actualizar(talle);
                          JOptionPane.showMessageDialog(null, "Actualizacion exitosa");
+                         limpiar();
                      }
                      
                  }
              } catch (HeadlessException e) {
+                  JOptionPane.showMessageDialog(null, "Debe seleccionar un taller de la tabla", "Error", JOptionPane.ERROR_MESSAGE);
                   System.out.println("Error en actualizarC" + e);
+                  
              }finally{
              listarTabla();
              }
          }
          
-         private void borrarTaller(){
-             try {
-                 if (id!=0) {
-                     tallEx.borrar(id);
-                      JOptionPane.showMessageDialog(null, "Registro borrado");
-                     
-                 }else{
-                 JOptionPane.showMessageDialog(null, "Debe de seleccionar un taller de la tabla", "Error", JOptionPane.ERROR);
-                 }
-             } catch (HeadlessException e) {
-                  System.out.println("Error en borrarC" + e);
-             }finally{
-             listarTabla();
-             }
-         }
+private void borrarTaller() {
+    try {
+        if (id != 0) {
+            int confirmacion = JOptionPane.showConfirmDialog(null, "¿Está seguro de borrar este taller?", "Confirmación de borrado", JOptionPane.YES_NO_OPTION);
+            if (confirmacion == JOptionPane.YES_OPTION) {
+                tallEx.borrar(id);
+                JOptionPane.showMessageDialog(null, "Registro borrado");
+                listarTabla();
+                limpiar();
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Debe seleccionar un taller de la tabla", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    } catch (HeadlessException e) {
+        System.out.println("Error en borrarC: " + e);
+    }
+}
         
          @Override
     public void actionPerformed(ActionEvent ae) {

@@ -5,6 +5,8 @@
 package gui;
 
 import Conexion.conexion;
+import Control.GimnasioUsuarioControl;
+import Control.talleresControl;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -119,8 +121,8 @@ public class IniciarSesionUI extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Inicio de sesión exitoso");
                 dispose();
                 //
-                GimnasioUsuario pantallaCliente = new GimnasioUsuario();
-                pantallaCliente.setVisible(true);
+                 GimnasioUsuario vista = new GimnasioUsuario();
+                GimnasioUsuarioControl controlador = new GimnasioUsuarioControl(vista);
             } else {
                 // Si no es cliente, verificar si es un instructor
                 PreparedStatement psInstructor = cn.prepareStatement("SELECT * FROM registroInstructor WHERE Correo = ? AND Contraseña = ?");
@@ -133,8 +135,8 @@ public class IniciarSesionUI extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "Inicio de sesión exitoso");
                     dispose();
                     //
-                    GimnasioInstructor pantallaInstructor = new GimnasioInstructor();
-                    pantallaInstructor.setVisible(true);
+                    GimnasioInstructor vista = new GimnasioInstructor();
+                    talleresControl controlador = new talleresControl(vista);
                 } else {
                     // Si no es instructor, mostrar mensaje de error
                     JOptionPane.showMessageDialog(null, "Usuario o Contraseña Incorrecto");
@@ -155,40 +157,7 @@ public class IniciarSesionUI extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(IniciarSesionUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(IniciarSesionUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(IniciarSesionUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(IniciarSesionUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new IniciarSesionUI().setVisible(true);
-            }
-        });
-    }
+  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextPane Ingresar1;
