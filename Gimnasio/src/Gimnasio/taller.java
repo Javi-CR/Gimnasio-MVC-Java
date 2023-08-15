@@ -10,7 +10,7 @@ import java.util.Random;
  */
 public class taller {
     
-    Random random = new Random();
+    
     private int idClase;
     private String nombreTaller;
     private String nombreInstructor;
@@ -18,17 +18,34 @@ public class taller {
     private String zona;
     private String nivel;
     private String descripcion;
+    private String duracion;
 
-    public taller(int idClase, String nombreTaller, String nombreInstructor, String horarioTaller,
-                  String zona, String nivel, String descripcion) {
-        this.idClase = random.nextInt(500)+1;
+    public taller() {
+    }
+
+    public taller(int idClase, String nombreTaller, String nombreInstructor, String horarioTaller, String zona, String nivel, String descripcion, String duracion) {
+        this.idClase = idClase;
         this.nombreTaller = nombreTaller;
         this.nombreInstructor = nombreInstructor;
         this.horarioTaller = horarioTaller;
         this.zona = zona;
         this.nivel = nivel;
         this.descripcion = descripcion;
+        this.duracion = duracion;
     }
+
+    public taller(String nombreTaller, String nombreInstructor, String horarioTaller, String zona, String nivel, String descripcion, String duracion) {
+        this.nombreTaller = nombreTaller;
+        this.nombreInstructor = nombreInstructor;
+        this.horarioTaller = horarioTaller;
+        this.zona = zona;
+        this.nivel = nivel;
+        this.descripcion = descripcion;
+        this.duracion = duracion;
+    }
+
+    
+   
 
     public int getIdClase() {
         return idClase;
@@ -84,6 +101,14 @@ public class taller {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public String getDuracion() {
+        return duracion;
+    }
+
+    public void setDuracion(String duracion) {
+        this.duracion = duracion;
     }
 
 }

@@ -3,7 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package gui;
-
+import Control.talleresControl;
+import java.awt.TextField;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 /**
  *
  * @author javie
@@ -58,6 +64,8 @@ public class GimnasioInstructor extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        DescripcionTaller1 = new java.awt.TextField();
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButton1.setText("Crear Taller");
@@ -231,6 +239,17 @@ public class GimnasioInstructor extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, 730, 460));
 
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel14.setText("Descripcion");
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, -1, -1));
+
+        DescripcionTaller1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DescripcionTaller1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DescripcionTaller1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 170, -1));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -288,42 +307,18 @@ public class GimnasioInstructor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BtonActTABLAActionPerformed
 
+    private void DescripcionTaller1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescripcionTaller1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DescripcionTaller1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GimnasioInstructor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GimnasioInstructor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GimnasioInstructor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GimnasioInstructor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new GimnasioInstructor().setVisible(true);
-            }
-        });
+        GimnasioInstructor vista = new GimnasioInstructor();
+        talleresControl controlador = new talleresControl(vista);
+      
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -331,6 +326,7 @@ public class GimnasioInstructor extends javax.swing.JFrame {
     public javax.swing.JButton BtonBorrarTaller;
     public javax.swing.JButton BtonCrearTaller;
     public java.awt.TextField DescripcionTaller;
+    public java.awt.TextField DescripcionTaller1;
     public java.awt.TextField DuracionTaller;
     public java.awt.TextField HoraTaller;
     public java.awt.TextField InstructorNom;
@@ -345,6 +341,7 @@ public class GimnasioInstructor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -357,4 +354,238 @@ public class GimnasioInstructor extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getBtonActTABLA() {
+        return BtonActTABLA;
+    }
+
+    public void setBtonActTABLA(JButton BtonActTABLA) {
+        this.BtonActTABLA = BtonActTABLA;
+    }
+
+    public JButton getBtonBorrarTaller() {
+        return BtonBorrarTaller;
+    }
+
+    public void setBtonBorrarTaller(JButton BtonBorrarTaller) {
+        this.BtonBorrarTaller = BtonBorrarTaller;
+    }
+
+    public JButton getBtonCrearTaller() {
+        return BtonCrearTaller;
+    }
+
+    public void setBtonCrearTaller(JButton BtonCrearTaller) {
+        this.BtonCrearTaller = BtonCrearTaller;
+    }
+
+    public TextField getDescripcionTaller() {
+        return DescripcionTaller;
+    }
+
+    public void setDescripcionTaller(TextField DescripcionTaller) {
+        this.DescripcionTaller = DescripcionTaller;
+    }
+
+    public TextField getDuracionTaller() {
+        return DuracionTaller;
+    }
+
+    public void setDuracionTaller(TextField DuracionTaller) {
+        this.DuracionTaller = DuracionTaller;
+    }
+
+    public TextField getHoraTaller() {
+        return HoraTaller;
+    }
+
+    public void setHoraTaller(TextField HoraTaller) {
+        this.HoraTaller = HoraTaller;
+    }
+
+    public TextField getInstructorNom() {
+        return InstructorNom;
+    }
+
+    public void setInstructorNom(TextField InstructorNom) {
+        this.InstructorNom = InstructorNom;
+    }
+
+    public TextField getNivelTaller() {
+        return NivelTaller;
+    }
+
+    public void setNivelTaller(TextField NivelTaller) {
+        this.NivelTaller = NivelTaller;
+    }
+
+    public JTable getTablaTaller() {
+        return TablaTaller;
+    }
+
+    public void setTablaTaller(JTable TablaTaller) {
+        this.TablaTaller = TablaTaller;
+    }
+
+    public TextField getTallerNom() {
+        return TallerNom;
+    }
+
+    public void setTallerNom(TextField TallerNom) {
+        this.TallerNom = TallerNom;
+    }
+
+    public TextField getZonaTaller() {
+        return ZonaTaller;
+    }
+
+    public void setZonaTaller(TextField ZonaTaller) {
+        this.ZonaTaller = ZonaTaller;
+    }
+
+    public JButton getjButton1() {
+        return jButton1;
+    }
+
+    public void setjButton1(JButton jButton1) {
+        this.jButton1 = jButton1;
+    }
+
+    public JButton getjButton2() {
+        return jButton2;
+    }
+
+    public void setjButton2(JButton jButton2) {
+        this.jButton2 = jButton2;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public JLabel getjLabel10() {
+        return jLabel10;
+    }
+
+    public void setjLabel10(JLabel jLabel10) {
+        this.jLabel10 = jLabel10;
+    }
+
+    public JLabel getjLabel11() {
+        return jLabel11;
+    }
+
+    public void setjLabel11(JLabel jLabel11) {
+        this.jLabel11 = jLabel11;
+    }
+
+    public JLabel getjLabel12() {
+        return jLabel12;
+    }
+
+    public void setjLabel12(JLabel jLabel12) {
+        this.jLabel12 = jLabel12;
+    }
+
+    public JLabel getjLabel13() {
+        return jLabel13;
+    }
+
+    public void setjLabel13(JLabel jLabel13) {
+        this.jLabel13 = jLabel13;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public void setjLabel5(JLabel jLabel5) {
+        this.jLabel5 = jLabel5;
+    }
+
+    public JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public void setjLabel6(JLabel jLabel6) {
+        this.jLabel6 = jLabel6;
+    }
+
+    public JLabel getjLabel7() {
+        return jLabel7;
+    }
+
+    public void setjLabel7(JLabel jLabel7) {
+        this.jLabel7 = jLabel7;
+    }
+
+    public JLabel getjLabel8() {
+        return jLabel8;
+    }
+
+    public void setjLabel8(JLabel jLabel8) {
+        this.jLabel8 = jLabel8;
+    }
+
+    public JLabel getjLabel9() {
+        return jLabel9;
+    }
+
+    public void setjLabel9(JLabel jLabel9) {
+        this.jLabel9 = jLabel9;
+    }
+
+    public JPanel getjPanel1() {
+        return jPanel1;
+    }
+
+    public void setjPanel1(JPanel jPanel1) {
+        this.jPanel1 = jPanel1;
+    }
+
+    public JPanel getjPanel2() {
+        return jPanel2;
+    }
+
+    public void setjPanel2(JPanel jPanel2) {
+        this.jPanel2 = jPanel2;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+
 }

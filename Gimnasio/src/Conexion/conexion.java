@@ -17,37 +17,34 @@ import java.util.logging.Logger;
  */
 public class conexion {
 
-    Connection conexion = null;
-
-    String url = "jdbc:mysql://localhost:3307/gimnasio";
-    String username = "root";
-    String password = "74123";
+    Connection con;
     String driver = "com.mysql.cj.jdbc.Driver";
-
-    public Connection conectar() {
-
+    String bdName = "Gimnasio";
+    String url =  "jdbc:mysql://localhost:3306/"+bdName+"?useSSL=false&serverTimezone=UTC";
+    String usuario = "root";
+    String clave ="Arvas1881802";
+    
+    public Connection conectarBaseDatos(){
         try {
             Class.forName(driver);
-            conexion = DriverManager.getConnection(url, username, password);
-            System.out.println("Conectado");
-        } catch (SQLException error) {
-            error.printStackTrace();
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(conexion.class.getName()).log(Level.SEVERE, null, ex);
+            con = DriverManager.getConnection(url, usuario, clave);
+            System.out.println("Conexion exitosa");
+        } catch (ClassNotFoundException | SQLException e) {
+            
+            System.out.println("Error en la conexion: "+ e);
         }
-        return conexion;
+        return con;
 
-    }
-
-    public void desconectar() {
-        if (conexion != null) {
-            try {
-                conexion.close();
-                System.out.println("Desconectado");
-            } catch (SQLException error) {
-                error.printStackTrace();
+}
+    
+      public void desconectar() {
+        try {
+            if (con != null) {
+                con.close();
+                System.out.println("Desconexión exitosa");
             }
+        } catch (SQLException e) {
+            System.out.println("Error al desconectar: " + e);
         }
     }
-
 }

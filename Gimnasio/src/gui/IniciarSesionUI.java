@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
 public class IniciarSesionUI extends javax.swing.JFrame {
     
     conexion con=new conexion();
-    Connection cn =con.conectar();
+    Connection cn =con.conectarBaseDatos();
     /**
      * Creates new form InciarSesionUI
     */

@@ -2,18 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Conexion;
+package Control;
 
 /**
  *
- * @author diego
+ * @author arjoz
  */
-public class NewMain {
-      public static void main(String[] args) {
-        conexion con =  new conexion();
-        con.conectarBaseDatos();
-        con.desconectar();
-
-    }
+public class GimnasioUsuarioControl {
     
 }

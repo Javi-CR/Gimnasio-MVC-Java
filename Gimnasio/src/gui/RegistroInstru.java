@@ -20,7 +20,7 @@ public class RegistroInstru extends javax.swing.JFrame {
     
     
     Conexion.conexion con = new Conexion.conexion();
-    Connection cn = con.conectar();
+    Connection cn = con.conectarBaseDatos();
     public RegistroInstru() {
         initComponents();
         setTitle("Registro (Instructor)");

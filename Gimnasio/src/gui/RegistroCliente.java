@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  */
 public class RegistroCliente extends javax.swing.JFrame {
 Conexion.conexion con = new Conexion.conexion();
-Connection cn = con.conectar();
+Connection cn = con.conectarBaseDatos();
     public RegistroCliente() {
         initComponents();
         setTitle("Registro (Cliente)");
